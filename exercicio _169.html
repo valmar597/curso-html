@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	  <meta charset="utf-8">
+      <title>JavaScript</title>
+       <script>
+        
+        var nome = prompt('digite seu nome');
+        var altura =  prompt('digite sua altura em centímetros');
+        var peso = prompt('digite seu peso');
+        
+
+          //converte as cadeias de caracters para dados do tipo float
+          altura = parseFloat(altura);
+          console.log(altura.toFixed(2));
+          peso = parseFloat(peso);
+          console.log(peso.toFixed(2));
+
+          // abaixo faz a convrsão da altura
+          altura = altura /100;
+          // realiza o cáculo deIMC
+          var IMC = peso / (altura**2);
+             
+
+           IMC = IMC.toFixed(3);
+
+            // testes condicionais para identificaçãp do peso
+            var classificação = '';
+
+         if (IMC<16)  {
+        
+           classificação ='Baixo peso,muito grave';
+        }
+           
+              else if( IMC >= 16 && IMC <=16.99 ) {
+
+
+           classificação = 'Baixo peso, muito grave';
+        }  
+              else if (IMC >= 17 && IMC <= 18.49) {
+
+           classificação = 'Baixo peso';
+        }
+           
+             else if(IMC >= 18.50  &&  IMC <= 24.99) {
+
+           classificação =  'Peso normal';
+        } 
+          
+            else if( IMC >= 25  && IMC <= 29.99){ 
+             
+           classificação = 'Sobrepeso';  
+      
+        }
+          
+            else if(IMC >= 30  && IMC <= 34.99) {
+
+          classificação =' Obesidade grau1';
+        }
+          
+            else if(IMC >= 35  && IMC <= 39.99 ) {
+
+          classificação =' Obesidade grau2';
+        }
+
+          
+              else if (IMC > 40)    {
+
+                classificação ='Obesidade grau3';
+                 
+               }
+            
+
+           
+
+
+        
+
+          
+          document.write( '<h1>'+ nome +  '  possui indice de massa corporal igual a :' + IMC + ' sendo classificado como' + classificação + ' <h1/>');
+
+        
+      </script>
+      
+    </head>
+
+     <body>
+    	</body>
+      </html>
